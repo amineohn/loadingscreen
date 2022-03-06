@@ -1,6 +1,6 @@
 html,
 body {
-  @apply font-default bg-black;
+  @apply font-default bg-black select-none;
 }
 a {
   color: inherit;
