@@ -1,28 +1,39 @@
 import type { NextPage } from "next";
-import React from "react";
-import FadeIn from "react-fade-in";
+import React, { useState } from "react";
 const Home: NextPage = () => {
+  const [backgrounds, setBackgrounds] = useState([
+    `/static/images/loadingnewsscreenbg4.png`,
+  ]);
+  const background =
+    typeof window !== "undefined" && document?.getElementById("background");
+  if (background) {
+    background.style.backgroundImage = `url(${backgrounds})`;
+  }
+  // update background images every 5 seconds
+
+  setInterval(() => {
+    setBackgrounds([`/static/images/loadingnewsscreenbg5.png`]);
+  }, 1000);
+
+  setInterval(() => {
+    setBackgrounds([`/static/images/loadingnewsscreenbg6.png`]);
+  }, 1500);
+
   return (
-    <FadeIn className="flex flex-col justify-center items-center h-screen bg-purple-600/50 backdrop-blur-md select-none space-y-1">
-      <h1 className="text-purple-300 drop-shadow-xl font-bold text-7xl">
-        Next.JS
-      </h1>
-      <p className="text-purple-200 drop-shadow-md text-xl mx-2">
-        Simple NextJS & Tailwind template aims to make it easier for you to task
-        to build your web projects.
-      </p>
-      <a
-        href="https://github.com/amineohn/next-template"
-        rel="noreffer noopener"
-        target="_blank"
+    <>
+      <div className="py-4" />
+      <div
+        className={`bg-cover w-[1800px] h-[900px] m-auto pt-5 px-5 -skew-x-3 scale-95 rounded transition-all ease-in-out duration-500`}
+        id="background"
       >
-        <button className="w-60 h-14 bg-purple-200/40 hover:bg-purple-200/30 transition duration-300 backdrop-blur-lg rounded-lg shadow-2xl shadow-purple-400">
-          <div className="flex justify-center items-center">
-            <p className="text-purple-50 text-center text-xl">Get Started</p>
-          </div>
-        </button>
-      </a>
-    </FadeIn>
+        <div>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae
+          reprehenderit commodi animi excepturi aliquid ipsum porro iste quidem
+          molestiae tempora eaque qui, sit laborum, consequatur eius dignissimos
+          corporis quas magni?
+        </div>
+      </div>
+    </>
   );
 };
 

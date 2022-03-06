@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "dynamic-background": "^0.1.9",
     "next": "^12.0.10",
     "next-seo": "^5.1.0",
     "next-superjson": "^0.0.2",
