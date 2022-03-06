@@ -64,7 +64,7 @@ const Home: NextPage = () => {
     typeof window !== "undefined" &&
     (document?.getElementById("audio") as HTMLAudioElement);
   if (audio) {
-    audio.load();
+    //audio.load();
     audio.play();
   }
   return (
