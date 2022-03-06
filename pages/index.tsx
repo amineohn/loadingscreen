@@ -111,7 +111,7 @@ const Home: NextPage = () => {
               }}
               className="bg-black/10 text-white font-medium rounded-lg px-8 py-2 backdrop-blur-sm transition-all ease-in-out duration-500 focus:outline-none scale-110"
             >
-              {audio ? "Pause" : "Play"}
+              {audio && audio.isConnected ? "Pause" : "Play"}
             </button>
           </div>
           <div className="bottom-0 fixed right-0 px-5 py-5">
