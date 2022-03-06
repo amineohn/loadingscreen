@@ -12,7 +12,7 @@ const Home: NextPage = () => {
   }
   useEffect(() => {
     setInterval(() => {
-      const random = Math.floor(Math.random() * 4);
+      const random = Math.floor(Math.random() * 16);
       switch (random) {
         case 0:
           setBackgrounds(`/static/images/loadingnewsscreenbg2.png`);
@@ -25,6 +25,34 @@ const Home: NextPage = () => {
           break;
         case 3:
           setBackgrounds(`/static/images/loadingnewsscreenbg5.png`);
+          break;
+        case 4:
+          setBackgrounds(`/static/images/loadingnewsscreenbg6.png`);
+          break;
+        case 5:
+          setBackgrounds(`/static/images/loadingnewsscreenbg7.png`);
+          break;
+        case 6:
+          setBackgrounds(`/static/images/loadingnewsscreenbg8.png`);
+          break;
+        case 7:
+          setBackgrounds(`/static/images/loadingnewsscreenbg9.png`);
+        case 8:
+          setBackgrounds(`/static/images/loadingnewsscreenbg10.png`);
+        case 9:
+          setBackgrounds(`/static/images/loadingnewsscreenbg11.png`);
+        case 10:
+          setBackgrounds(`/static/images/loadingnewsscreenbg12.png`);
+        case 11:
+          setBackgrounds(`/static/images/loadingnewsscreenbg13.png`);
+        case 12:
+          setBackgrounds(`/static/images/loadingnewsscreenbg14.png`);
+        case 13:
+          setBackgrounds(`/static/images/loadingnewsscreenbg15.png`);
+        case 14:
+          setBackgrounds(`/static/images/loadingnewsscreenbg16.png`);
+        case 15:
+          setBackgrounds(`/static/images/loadingnewsscreenbg17.png`);
           break;
         default:
           setBackgrounds(`/static/images/loadingnewsscreenbg6.png`);
