@@ -71,7 +71,7 @@ const Home: NextPage = () => {
       <audio id="audio" src="/static/music/musicGeneric.mp3" />
       <div className="py-4" />
       <div
-        className={`bg-cover w-[1800px] h-[900px] m-auto pt-5 px-5 -skew-x-3 scale-95 rounded transition-all ease-in-out duration-500`}
+        className="bg-cover w-[1800px] h-[900px] m-auto pt-5 px-5 -skew-x-3 scale-95 rounded transition-all ease-in-out duration-500"
         id="background"
       >
         <div className="flex justify-center items-center">
@@ -83,7 +83,7 @@ const Home: NextPage = () => {
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
-                stroke-width="2"
+                strokeWidth="2"
               >
                 <path
                   strokeLinecap="round"
