@@ -1,5 +1,5 @@
 import type { NextPage } from "next";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Loading from "../components/Loading";
 const Home: NextPage = () => {
   const [backgrounds, setBackgrounds] = useState(
@@ -10,26 +10,28 @@ const Home: NextPage = () => {
   if (background) {
     background.style.backgroundImage = `url(${backgrounds})`;
   }
-  setInterval(() => {
-    const random = Math.floor(Math.random() * 4);
-    switch (random) {
-      case 0:
-        setBackgrounds(`/static/images/loadingnewsscreenbg2.png`);
-        break;
-      case 1:
-        setBackgrounds(`/static/images/loadingnewsscreenbg3.png`);
-        break;
-      case 2:
-        setBackgrounds(`/static/images/loadingnewsscreenbg4.png`);
-        break;
-      case 3:
-        setBackgrounds(`/static/images/loadingnewsscreenbg5.png`);
-        break;
-      default:
-        setBackgrounds(`/static/images/loadingnewsscreenbg6.png`);
-        break;
-    }
-  }, 3000);
+  useEffect(() => {
+    setInterval(() => {
+      const random = Math.floor(Math.random() * 4);
+      switch (random) {
+        case 0:
+          setBackgrounds(`/static/images/loadingnewsscreenbg2.png`);
+          break;
+        case 1:
+          setBackgrounds(`/static/images/loadingnewsscreenbg3.png`);
+          break;
+        case 2:
+          setBackgrounds(`/static/images/loadingnewsscreenbg4.png`);
+          break;
+        case 3:
+          setBackgrounds(`/static/images/loadingnewsscreenbg5.png`);
+          break;
+        default:
+          setBackgrounds(`/static/images/loadingnewsscreenbg6.png`);
+          break;
+      }
+    }, 3000);
+  }, []);
   const audio =
     typeof window !== "undefined" &&
     (document?.getElementById("audio") as HTMLAudioElement);
