@@ -99,6 +99,9 @@ const Home: NextPage = () => {
               </span>
             </div>
           </div>
+          <div className="bottom-0 fixed left-0 px-5 py-5">
+            <img src="/static/images/logo.png" className="w-36" alt="logo" />
+          </div>
           <div className="bottom-0 fixed py-5 px-5 hidden">
             <button
               onClick={() => {
