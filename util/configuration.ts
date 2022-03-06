@@ -1,4 +1,4 @@
 export const configuration = {
-  title: "Next.js + TypeScript + Tailwind CSS",
-  description: "Template NextJS, Tailwind, TypeScript",
+  title: "Loading Screen",
+  description: "A loading screen.",
 };
