@@ -70,7 +70,7 @@ const Home: NextPage = () => {
   return (
     <>
       <audio id="audio" src="/static/music/musicGeneric.mp3" />
-      <div className="py-4" />
+      <div className="py-1.5" />
       <div
         className="bg-cover w-[1800px] h-[900px] m-auto pt-5 px-5 -skew-x-3 scale-95 rounded transition-all ease-in-out duration-500"
         id="background"
